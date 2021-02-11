@@ -14,33 +14,28 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Employeedetails")
 public class Employeedetails {
 	@Id
-	private int id;
-	private String fname;
-	private String lname;
+	private String id;
+	private String firstName;
+	private String lastName;
 	private String address;
 	private String email;
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	@Override
-	public String toString() {
-		return "Employeedetails [id=" + id + ", fname=" + fname + ", lname=" + lname + ", address=" + address
-				+ ", email=" + email + "]";
-	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public String getFname() {
-		return fname;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLname() {
-		return lname;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 	public String getAddress() {
 		return address;
@@ -51,8 +46,13 @@ public class Employeedetails {
 	public String getEmail() {
 		return email;
 	}
+	@Override
+	public String toString() {
+		return "Employeedetails [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", address="
+				+ address + ", email=" + email + "]";
+	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+			
 }
